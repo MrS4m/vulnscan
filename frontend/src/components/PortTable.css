@@ -1,0 +1,128 @@
+.port-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+}
+
+.port-section .section-title svg {
+    color: var(--accent-cyan);
+}
+
+.port-table-wrapper {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.port-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.port-table thead {
+    background: rgba(0, 212, 255, 0.05);
+}
+
+.port-table th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.port-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.port-table tbody tr {
+    transition: background var(--transition-fast);
+}
+
+.port-table tbody tr:hover {
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.port-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.port-number {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-cyan) !important;
+}
+
+.port-protocol {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted) !important;
+}
+
+.port-service {
+    font-weight: 600;
+    color: var(--text-primary) !important;
+}
+
+.port-version {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+/* State badges */
+.state-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.state-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.state-open .state-dot {
+    background: var(--accent-green);
+    box-shadow: 0 0 4px var(--accent-green);
+}
+
+.state-open {
+    color: var(--accent-green);
+}
+
+.state-closed .state-dot {
+    background: var(--severity-critical);
+}
+
+.state-closed {
+    color: var(--text-muted);
+}
+
+.state-filtered .state-dot {
+    background: var(--severity-medium);
+}
+
+.state-filtered {
+    color: var(--severity-medium);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .port-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .port-table {
+        min-width: 500px;
+    }
+}

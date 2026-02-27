@@ -1,0 +1,230 @@
+.scan-results {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+}
+
+/* === Header === */
+.results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 1rem;
+}
+
+.results-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.results-target {
+    margin-bottom: 1rem;
+}
+
+.meta-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.meta-value.mono {
+    font-family: var(--font-mono);
+    color: var(--accent-cyan);
+}
+
+.meta-value.small {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.results-info-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.scan-type-badge {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: var(--accent-purple-glow);
+    color: var(--accent-purple);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+/* === Risk Gauge === */
+.risk-gauge {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+}
+
+.risk-gauge-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.risk-gauge-fill {
+    transition: stroke-dasharray 1s ease;
+}
+
+.risk-gauge-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-score {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    font-family: var(--font-mono);
+}
+
+.risk-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.2rem;
+}
+
+/* === Summary === */
+.results-summary {
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.results-summary p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* === Severity Counters === */
+.severity-counters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.severity-counter {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    transition: transform var(--transition-fast);
+}
+
+.severity-counter:hover {
+    transform: translateY(-2px);
+}
+
+.counter-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.counter-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.severity-counter.critical {
+    border-color: rgba(255, 45, 85, 0.2);
+    background: var(--severity-critical-bg);
+}
+
+.severity-counter.critical .counter-value {
+    color: var(--severity-critical);
+}
+
+.severity-counter.critical .counter-label {
+    color: var(--severity-critical);
+}
+
+.severity-counter.high {
+    border-color: rgba(255, 107, 53, 0.2);
+    background: var(--severity-high-bg);
+}
+
+.severity-counter.high .counter-value {
+    color: var(--severity-high);
+}
+
+.severity-counter.high .counter-label {
+    color: var(--severity-high);
+}
+
+.severity-counter.medium {
+    border-color: rgba(255, 184, 0, 0.2);
+    background: var(--severity-medium-bg);
+}
+
+.severity-counter.medium .counter-value {
+    color: var(--severity-medium);
+}
+
+.severity-counter.medium .counter-label {
+    color: var(--severity-medium);
+}
+
+.severity-counter.low {
+    border-color: rgba(52, 211, 153, 0.2);
+    background: var(--severity-low-bg);
+}
+
+.severity-counter.low .counter-value {
+    color: var(--severity-low);
+}
+
+.severity-counter.low .counter-label {
+    color: var(--severity-low);
+}
+
+/* === Responsive === */
+@media (max-width: 640px) {
+    .results-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .results-info-row {
+        justify-content: center;
+    }
+
+    .severity-counters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
