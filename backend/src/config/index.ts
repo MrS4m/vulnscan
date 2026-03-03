@@ -7,4 +7,7 @@ export const config = {
     api: {
         prefix: '/api/v1',
     },
+    nmap: {
+        path: process.env.NMAP_PATH || 'C:\\Program Files (x86)\\Nmap\\nmap.exe',
+    },
 };

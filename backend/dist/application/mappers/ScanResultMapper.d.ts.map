@@ -1,0 +1,1 @@
+{"version":3,"file":"ScanResultMapper.d.ts","sourceRoot":"","sources":["../../../src/application/mappers/ScanResultMapper.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,kCAAkC,CAAC;AAC9D,OAAO,EAAE,eAAe,EAAE,MAAM,yBAAyB,CAAC;AAE1D,qBAAa,gBAAgB;IACzB,MAAM,CAAC,KAAK,CAAC,MAAM,EAAE,UAAU,GAAG,eAAe;CAoCpD"}

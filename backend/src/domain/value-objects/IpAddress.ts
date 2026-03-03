@@ -9,7 +9,7 @@ export class IpAddress {
     }
 
     private static isValid(ip: string): boolean {
-        return IpAddress.isValidIPv4(ip) || IpAddress.isValidIPv6(ip);
+        return IpAddress.isValidIPv4(ip) || IpAddress.isValidIPv6(ip) || IpAddress.isValidHostname(ip);
     }
 
     private static isValidIPv4(ip: string): boolean {
@@ -24,6 +24,11 @@ export class IpAddress {
     private static isValidIPv6(ip: string): boolean {
         const ipv6Regex = /^([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$|^::$|^(([0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{1,4})?::(([0-9a-fA-F]{1,4}:)*[0-9a-fA-F]{1,4})?$/;
         return ipv6Regex.test(ip.trim());
+    }
+
+    private static isValidHostname(ip: string): boolean {
+        const hostnameRegex = /^(?!-)[A-Za-z0-9-]{1,63}(?<!-)(\.[A-Za-z0-9-]{1,63})*$/;
+        return hostnameRegex.test(ip.trim());
     }
 
     get isPrivate(): boolean {

@@ -5,7 +5,7 @@ import { NetworkScanController } from '../controllers/NetworkScanController';
 import { WebScanController } from '../controllers/WebScanController';
 import { AnalyzeNetworkUseCase } from '../../application/use-cases/AnalyzeNetworkUseCase';
 import { AnalyzeWebsiteUseCase } from '../../application/use-cases/AnalyzeWebsiteUseCase';
-import { NmapNetworkScanner } from '../../infrastructure/scanners/NmapNetworkScanner';
+import { RealNmapScanner } from '../../infrastructure/scanners/RealNmapScanner';
 import { WebVulnerabilityScanner } from '../../infrastructure/scanners/WebVulnerabilityScanner';
 
 /**
@@ -20,7 +20,7 @@ export function createRoutes(): Router {
     // --- Dependency Injection (Composition Root) ---
 
     // Infrastructure
-    const networkScanner = new NmapNetworkScanner();
+    const networkScanner = new RealNmapScanner();
     const webScanner = new WebVulnerabilityScanner();
 
     // Application

@@ -74,6 +74,8 @@
 
 .input-row {
     margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
 }
 
 .input-wrapper {
@@ -84,6 +86,8 @@
     border-radius: var(--radius-md);
     padding: 0 1rem;
     transition: all var(--transition-normal);
+    width: 100%;
+    min-height: 3.5rem;
 }
 
 .input-wrapper:focus-within {
@@ -106,7 +110,7 @@
     font-size: 0.95rem;
     padding: 0.9rem 0;
     outline: none;
-    width: 0;
+    width: 100%;
 }
 
 .scan-input::placeholder {

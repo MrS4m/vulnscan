@@ -76,6 +76,7 @@ export function ScanForm({ onScan, isLoading }: ScanFormProps) {
                                 aria-label={activeTab === 'network' ? 'IP address' : 'Website URL'}
                                 autoComplete="off"
                                 spellCheck={false}
+                                autoFocus
                             />
                         </div>
                     </div>
