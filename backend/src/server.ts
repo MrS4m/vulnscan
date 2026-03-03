@@ -6,7 +6,7 @@ const app = createApp();
 app.listen(config.port, () => {
     console.log('');
     console.log('╔══════════════════════════════════════════════════════╗');
-    console.log('║  🛡️  Vulnerability Scanner API                       ║');
+    console.log('║  ⚡  FlashScan API                            ║');
     console.log('╠══════════════════════════════════════════════════════╣');
     console.log(`║  🚀 Server running on port ${config.port}                     ║`);
     console.log(`║  📚 Swagger docs: http://localhost:${config.port}/api-docs     ║`);

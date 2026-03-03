@@ -101,7 +101,7 @@ function Scanner() {
       <footer className="app-footer">
         <p>
           <span className="footer-icon" aria-hidden="true">🛡️</span>
-          VulnScanner API — Educational & Defensive Security Tool
+          FlashScan API — Educational & Defensive Security Tool
         </p>
       </footer>
     </div>

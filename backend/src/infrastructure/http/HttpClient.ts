@@ -18,7 +18,7 @@ export class HttpClient {
                 {
                     timeout: timeoutMs,
                     headers: {
-                        'User-Agent': 'VulnScanner-API/1.0 (Security Research)',
+                        'User-Agent': 'FlashScan-API/1.0 (Security Research)',
                     },
                     rejectUnauthorized: false, // Allow self-signed certs for analysis
                 },
