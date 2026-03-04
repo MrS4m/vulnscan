@@ -9,7 +9,7 @@ export function Header() {
             <div className="header-content">
                 <div className="header-logo">
                     <div className="header-icon" aria-hidden="true">
-                        <img src="/logo.png" alt="FlashScan" style={{ height: '80px', width: 'auto', objectFit: 'contain' }} />
+                        <img src="/logo.png" alt="FlashScan" style={{ height: '80px', width: 'auto', objectFit: 'contain', mixBlendMode: 'screen' }} />
                     </div>
                 </div>
                 <div className="header-status">

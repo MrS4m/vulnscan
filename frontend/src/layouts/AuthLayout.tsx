@@ -10,7 +10,7 @@ export function AuthLayout() {
                 {/* Header / Logo Component */}
                 <div className="auth-header">
                     <div className="auth-logo">
-                        <img src="/logo.png" alt="FlashScan" style={{ width: '340px', height: 'auto', objectFit: 'contain' }} />
+                        <img src="/logo.png" alt="FlashScan" style={{ width: '340px', height: 'auto', objectFit: 'contain', mixBlendMode: 'screen' }} />
                     </div>
                 </div>
 
