@@ -8,13 +8,15 @@ async function request<T>(url: string, options?: RequestInit): Promise<T> {
         ...options,
     });
 
-    const data = await response.json();
+    const isJson = response.headers.get('content-type')?.includes('application/json');
+    const data = isJson ? await response.json() : await response.text();
 
     if (!response.ok) {
-        throw new Error(data.message || `Request failed with status ${response.status}`);
+        const errorMsg = isJson && data.message ? data.message : (typeof data === 'string' && data ? data : `Request failed with status ${response.status}`);
+        throw new Error(errorMsg);
     }
 
-    return data;
+    return data as T;
 }
 
 export const api = {

@@ -32,6 +32,9 @@ export class HttpClient {
                             body,
                         });
                     });
+                    res.on('error', (err) => {
+                        reject(new Error(`Response stream error for ${url}: ${err.message}`));
+                    });
                 }
             );
 
